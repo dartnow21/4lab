@@ -43,7 +43,14 @@ class PolRegres:
         omega_min = func.find(str(loss_function[0]), omega_point, 0.00001, 0, 0, 0)
 
         y_ = np.dot(x, omega_min)
-        print(f'Вектор модельных предсказанных данных: {y_}')
+
+        print(f'Вектор модельных предсказанных данных: {y_}') 
+        print(f'Массив коэффициентов регрессии: {omega_min[1:]}') 
+        print(f'Свободный член: {omega_min[0]}') 
+        y_str = str(omega_min[0]) 
+        for i in range(1, len(omega_min)): 
+            y_str = y_str + f' + {omega_min[i]} * {list(symbols(X))[i-1]}' 
+        print(f'Функция в аналитическом виде: y^={y_str}')
 
 # y = []
 # print("Введите кол-во строк в матрице(n). Например 3")
