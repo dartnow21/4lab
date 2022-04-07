@@ -1,4 +1,4 @@
-from brent import BrentMet
+from lab4.brent import *
 from sympy import *
 import numpy as np
 from re import findall
