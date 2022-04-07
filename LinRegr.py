@@ -41,7 +41,7 @@ class LinRegr:
         omega_min = func.find(str(loss_function[0]), omega_point, 0.00001, 0, 0, 0)
 
         y_ = np.dot(x, omega_min)
-        print(y_)
+        print(f'Вектор модельных предсказанных данных: {y_}')
 
 
 #functionss = LinRegr()
