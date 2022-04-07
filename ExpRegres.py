@@ -56,6 +56,12 @@ class ExpRegres:
             y.append(y_om)
 
         print(f'Вектор модельных предсказанных данных: {y}')
+        print(f'Массив коэффициентов регрессии: {omega_min[1:]}') 
+        print(f'Свободный член: {omega_min[0]}') 
+        y_str = str(omega_min[0]) 
+        for i in range(1, len(omega_min)):
+            y_str = y_str + f' + {omega_min[i]}^{list(symbols(X))[i - 1]}' 
+        print(f'Функция в аналитическом виде: y^={y_str}')
 
 
 #functionss = ExpRegres()
