@@ -46,7 +46,7 @@ class ExpRegres:
 
         for i in range(len(omega_min)):
             omega_min[i] = math.e ** omega_min[i]
-        print(omega_min)
+        #print(omega_min)
         y = []
 
         for i in range(n):
@@ -55,7 +55,7 @@ class ExpRegres:
                 y_om = y_om * (omega_min[j]**x[i][j])
             y.append(y_om)
 
-        print(y)
+        print(f'Вектор модельных предсказанных данных: {y}')
 
 
 #functionss = ExpRegres()
