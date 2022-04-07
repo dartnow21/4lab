@@ -3,6 +3,7 @@
 
 Подробнее узнать о задании можно по ссылке: https://github.com/dartnow21/lab4/blob/main/TZ_Regressia.docx
 
+Мы вели проект в Jira, где представлены наши основные задачи: https://twoteam.atlassian.net/jira/software/projects/LAB4/boards/4
 
 Документация проекта:
 
