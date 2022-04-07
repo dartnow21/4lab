@@ -3,15 +3,14 @@
 
 Подробнее узнать о задании можно по ссылке: 
 
-Мы вели проект в Jira, где представлены наши основные задачи: 
 
 Документация проекта:
 
-1 - Линейная регрессия: 
+1 - Линейная регрессия: https://github.com/dartnow21/4lab/blob/main/Lineynaya_regressia.docx
 
-2 - Полиномиальная регрессия: 
+2 - Полиномиальная регрессия: https://github.com/dartnow21/4lab/blob/main/Polinomialnaya_regressia.docx
 
-3 - Экспоненциальная регрессия: 
+3 - Экспоненциальная регрессия: https://github.com/dartnow21/4lab/blob/main/Exponentsialnaya_regressia.docx
 
 ## Демонстрация возможностей программы
 
