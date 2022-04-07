@@ -43,7 +43,7 @@ class PolRegres:
         omega_min = func.find(str(loss_function[0]), omega_point, 0.00001, 0, 0, 0)
 
         y_ = np.dot(x, omega_min)
-        print(y_)
+        print(f'Вектор модельных предсказанных данных: {y_}')
 
 # y = []
 # print("Введите кол-во строк в матрице(n). Например 3")
