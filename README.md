@@ -13,7 +13,9 @@
 
 3 - Экспоненциальная регрессия: https://github.com/dartnow21/4lab/blob/main/Exponentsialnaya_regressia.docx
 
-## Документация проекта (там же присутствуют тесты программы на разных датасетах в пункте 6): https://github.com/dartnow21/lab4/blob/main/Opisanie_struktury_i_razdelov_RAR-2_1.pdf
+## Документация проекта 
+
+(там же присутствуют тесты программы на разных датасетах в пункте 6): https://github.com/dartnow21/lab4/blob/main/Opisanie_struktury_i_razdelov_RAR-2_1.pdf
 
 ## Демонстрация возможностей программы
 
