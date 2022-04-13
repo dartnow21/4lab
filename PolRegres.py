@@ -2,6 +2,8 @@ from sympy import *
 from sklearn.preprocessing import PolynomialFeatures
 import re
 import numpy as np
+import matplotlib.pyplot as plt
+import numexpr as ne
 from lab4.AdjGrad import *
 from lab4.brent import *
 
@@ -51,6 +53,45 @@ class PolRegres:
         for i in range(1, len(omega_min)): 
             y_str = y_str + f' + {omega_min[i]} * {list(symbols(X))[i-1]}' 
         print(f'Функция в аналитическом виде: y^={y_str}')
+        
+        if (len(omega_min) - 1) == 1:
+            fig, ax = plt.subplots(figsize=(10, 10))
+
+            ax.set_title('Экспоненциальная регрессия', loc='left', fontweight='bold')
+            ax.set_title(f'y^ = {y_str}', loc='right')
+            ax.set_ylabel('y^')
+            ax.set_xlabel('x1')
+
+            x1 = np.linspace(-10, 10, 50)
+            y = ne.evaluate(y_str)
+
+            plt.plot(x1, y, color='b')
+            x1 = Symbol('x1')
+            for i in range(len(x)):
+                ax.scatter(x[i][1], sympify(y_str).subs(x1, x[i][1]), c='r')
+
+            plt.show()
+
+        elif (len(omega_min) - 1) == 2:
+            fig = plt.figure(figsize=(10, 8))
+            ax = fig.add_subplot(projection='3d')
+            ax.set_title(f'y^ = {y_str}', loc='right')
+            ax.set_zlabel('y^')
+            ax.set_ylabel('x2')
+            ax.set_xlabel('x1')
+
+            x1 = np.linspace(np.min(x), np.max(x), 25)
+            x2 = np.linspace(np.min(x), np.max(x), 25)
+            x1, x2 = np.meshgrid(x1, x2)
+            y = ne.evaluate(y_str)
+
+            surf = ax.plot_surface(x1, x2, y, cmap='viridis', shade=True, alpha=0.5)
+            fig.colorbar(surf, shrink=0.5, aspect=10)
+            x1, x2 = symbols('x1 x2')
+            for i in range(len(x)):
+                ax.scatter(x[i][1], x[i][2], sympify(y_str).subs([(x1, x[i][1]), (x2, x[i][2])]), c='r')
+
+            plt.show()
 
 # y = []
 # print("Введите кол-во строк в матрице(n). Например 3")
