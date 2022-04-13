@@ -51,7 +51,7 @@ class LinRegr:
             y_str = y_str + f' + {omega_min[i]} * {list(symbols(X))[i-1]}' 
         print(f'Функция в аналитическом виде: y^={y_str}')
         
-                if (len(omega_min) - 1) == 1:
+        if (len(omega_min) - 1) == 1:
             fig, ax = plt.subplots(figsize=(10, 10))
 
             ax.set_title('Линейная регрессия', loc='left', fontweight='bold')
