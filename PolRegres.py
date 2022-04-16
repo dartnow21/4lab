@@ -19,7 +19,7 @@ class PolRegres:
         :param y: np.array
             массив предсказываемых данных 
         :param x: list
-            массив предикатов X размерностью 
+            массив предикатов X
         :param n: int
             кол-во строк в матрице
         :param m: int
